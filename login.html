@@ -31,24 +31,34 @@
     </header>
     <section class="full-banner-form">
         <div class="container-login">  
-            <form class="form-login">
+            <form class="form-login" method="post">
+
                 <label for="login">
                     CPF*: 
-                    <input type="text" name="login" id="login" placeholder="Digite o CPF"/>
+                    <input type="text" name="login" id="login" placeholder="Digite o CPF" 
+                    oninvalid="this.setCustomValidity('Preencha o campo CPF')"
+                    oninput="this.setCustomValidity('')"/>
                 </label>
+                
                 <label for="password">
                     Senha*: 
-                    <input type="password" name="login" id="login" placeholder="Digite a senha"/>
+                    <input type="password" name="password" required id="password" 
+                    placeholder="Digite a senha" 
+                        pattern="(?=.*\d)(?=.*[A-Z])?=.*[a-z]).{8,}" 
+                        title="A senha deve conter, ao menos uma letra minúscula, uma letra maiúscula,
+                        um número e pelo menos 8 caracteres" />
                 </label>
+
                 <button type="submit">continuar</button>
                 <p><a href="#">Esqueci minha senhha</a></p>
                 <p><a href="#">Ainda não sou cliente</a></p> 
             </form>
+        
         </div>
     </section>
 <fotter>
     
-    </fotter>
+</fotter>
     <script>
         const header = document.querySelector(".top-site");
         const button = document.querySelector(".top-button");
@@ -66,5 +76,6 @@
         });
 
     </script>
+    <script type="text/javascript" src="assets/js/main.js"> </script>
   </body>
 </html>
