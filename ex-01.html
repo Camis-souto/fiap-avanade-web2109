@@ -8,8 +8,8 @@
     <style type="text/css">
         /* vh - viewport height */
         /* ------------------------------------------ */
-        /* normalizar o navegador */
-        body {
+        /* resetar ou normalizar o navegador */
+        body {   /*se não zerar essas margens, o body vai ficar com uma faixa branca automática*/
             margin: 0;
             padding: 0;
         }
@@ -74,12 +74,12 @@
             background-position: center center;
         }
 
-        /* Daqui pra cima é tudo mobile */
+    /* Daqui pra cima é tudo mobile */
+        /*  */
 
         /* tablet - mediaquerie para largura da tela começando em 768px*/
         @media (min-width: 768px) {
-
-            /* tablet */
+            /* (min-width = altura minima) tablet */
             body {
                 background: url("assets/images/background-tablet.webp") no-repeat;
                 background-size: cover;
@@ -88,16 +88,16 @@
         }
 
         @media (min-width: 1280px) {
-
             /* desktop */
             body {
                 background: url("assets/images/background-desktop.webp") no-repeat;
                 background-size: cover;
-                background-position: center center;
-            }
+                background-position: center center; 
+                /* center center pq fica no meio, tanto no eixo x como no y. */
+            }   
         }
 
-        /* 2520px - Extra Large - iMac 27" */
+        /* no caso, se quiser fazer para 2520px - Extra Large - iMac 27, copiar os exemplos acima." */
     </style>
 </head>
 
