@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro clientes</title>
+    <link rel="stylesheet" href="assets/css/cadastro.css">
+</head>
+
+<body> 
+    <section class="full-banner-form">
+        <div class="container-login">  
+            <form class="form-name" method="post">
+
+        <label for="nome">
+        Nome*:
+            <input required type="text" name="login" id="login" placeholder="O campo nome é obrigatório"
+                oninvalid="this.setCustomValidity('Preencha o campo CPF')"
+                oninput="this.setCustomValidity('')"/>
+        </label>
+
+        <label for="email">
+        Email*:
+            <input required type="text" name="login" id="login" placeholder="O campo email é obrigatório"
+                oninvalid="this.setCustomValidity('Preencha o campo CPF')" 
+                oninput="this.setCustomValidity('')"/>
+        </label>
+
+        <label for="password">
+        Senha*:
+            <input required type="password" name="password" id="password" placeholder="O campo senha é obrigatório"
+                pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"
+                title="A senha deve conter ao menos uma letra minúscula, uma letra maiúscula, um número e pelo menos 8 caracteres."/>
+        </label>
+
+        <label for="password">
+        Confirme a Senha*:
+            <input required type="password" name="password" id="password" placeholder="O campo confirme a senha é obrigatório"
+                pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"
+                title="A senha deve conter ao menos uma letra minúscula, uma letra maiúscula, um número e pelo menos 8 caracteres."/>
+        </label>
+
+                <button type="submit">continuar</button>
+                <p><a href="#">Esqueci minha senha</a></p>
+            </form>
+        </div>
+    </section>
+</body>
+</html>

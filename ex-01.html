@@ -37,13 +37,13 @@
             background-color: rgba(0, 0, 0, 0.5);
         }
 
-        body>div>h1.titulo {
+        body>div>h1.titulo { /*esta ainda mais especifico*/
             color: red;
         }
 
-        h1.titulo,
+        h1.titulo, /* se quiser usar de forma mais especifica, usar uma tag na frente do .*/
         h2.titulo {
-            color: #fff !important;
+            color: #fff !important; /*NÃO USAR !important, não é uma boa regra*/
             text-align: center;
         }
 
@@ -75,8 +75,7 @@
         }
 
     /* Daqui pra cima é tudo mobile */
-        /*  */
-
+    
         /* tablet - mediaquerie para largura da tela começando em 768px*/
         @media (min-width: 768px) {
             /* (min-width = altura minima) tablet */

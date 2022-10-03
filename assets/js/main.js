@@ -9,8 +9,7 @@ escreve("Exemplo de função nominal")
 function escreve(titulo) {
     //alert(titulo);
 }
-
-//7 tipos diferentes de erros em JavaScript - 3 são os mais comuns.S
+// existem 7 tipos diferentes de erros em JavaScript - 3 são os mais comuns.S
 // 1 - SyntaxError - escreveu algo errado.
 // 2 - ReferenceError - chamou alguma função que não existe.
 // 3 - TypeError - foi violado alguma regra do JavaScript.
@@ -24,17 +23,17 @@ function escreve(titulo) {
 
 //função nominal - sofre hoisting. (é içada para cima do código)
 function mudaTitulo(novoTitulo){
-    document.querySelector("h1").innerHTML = novoTitulo;
+   document.querySelector("h1").innerHTML = novoTitulo;
 };
 //escopo, orientação a objetos.
 mudaTitulo("Vc consegue!"); 
 
 //expressão de função - function Expression 
 //função anônima
-const mudaTitulo2 = function(novoTitulo) {
-    document.querySelector("h2").innerHTML = novoTitulo;
+const mudaTitulo2 = function(target, novoTitulo) {
+    document.querySelector(target).innerHTML = novoTitulo;
 };
-mudaTitulo2("trocando o subtitulo");
+mudaTitulo2("h1", );
 //arrow Function - é uma função criada no ES6 ou ES2015
 //não existe o this dentro de uma arrow function.
 //não existe um método construtor.
@@ -42,6 +41,27 @@ mudaTitulo2("trocando o subtitulo");
 
 const relogio = ()=>{
     const date = new Date();
-    mudaTitulo2(date.toLocaleTimeString());
+    mudaTitulo2("h2", date.toLocaleTimeString());
 };
 setInterval(relogio, 1000);
+
+//setInterval(() => {}, tempo);
+
+const frases = [
+    "A vida é bela", 
+    "A vida é curta", 
+    "A vida é uma dádiva"
+];
+
+const mudaFrase = (alvo, texto, tempo) =>{
+    //const frase = frases[Math.floor(Math.random() * frases.length)];
+    //mudaTitulo2("h3", frases);[]
+    let total = 0;
+    setInterval(()=>{
+        document.querySelector(alvo).innerHTML = 
+        texto[total >= texto.length - 1 ? (total = 0) :(total +=1)];
+    }, tempo * 1000);
+};
+
+mudaFrase("h1", frases, 4)
+
