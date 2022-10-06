@@ -56,8 +56,8 @@ const frases = [
 const mudaFrase = (alvo, texto, tempo) =>{
     //const frase = frases[Math.floor(Math.random() * frases.length)];
     //mudaTitulo2("h3", frases);[]
-    let total = 0;
-    setInterval(()=>{
+    let total = 2;
+    setInterval(()=>{ 
         document.querySelector(alvo).innerHTML = 
         texto[total >= texto.length - 1 ? (total = 0) :(total +=1)];
     }, tempo * 1000);
